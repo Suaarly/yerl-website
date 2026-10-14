@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 500" fill="none" role="img" aria-labelledby="t">
+<title id="t">Technical illustration of a robotic arm and circuit-board geometry</title>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#193b46"/><stop offset="1" stop-color="#0b1824"/></linearGradient><linearGradient id="arm" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#79e7d8"/><stop offset="1" stop-color="#377b83"/></linearGradient></defs>
+<rect x="20" y="28" width="505" height="442" rx="26" fill="url(#bg)" stroke="#305361" stroke-width="2"/>
+<g stroke="#30505b" stroke-width="1" opacity=".46"><path d="M60 30v440M110 30v440M160 30v440M210 30v440M260 30v440M310 30v440M360 30v440M410 30v440M460 30v440M20 78h505M20 128h505M20 178h505M20 228h505M20 278h505M20 328h505M20 378h505M20 428h505"/></g>
+<g stroke="#4a8c91" opacity=".7"><path d="M75 95h88m-38 0v32h80M423 90h47v80h25M60 388h80v-37h42M390 390h82v-80h21"/><circle cx="75" cy="95" r="4" fill="#7ce7dc"/><circle cx="205" cy="127" r="4" fill="#7ce7dc"/><circle cx="495" cy="170" r="4" fill="#7ce7dc"/><circle cx="182" cy="351" r="4" fill="#7ce7dc"/><circle cx="493" cy="310" r="4" fill="#7ce7dc"/></g>
+<g stroke="#84d9d2" stroke-width="2" stroke-dasharray="5 6" opacity=".65"><path d="M90 358h378M105 150h340M275 75v355"/><circle cx="277" cy="248" r="184"/></g>
+<g transform="translate(80 76)">
+<ellipse cx="216" cy="318" rx="145" ry="18" fill="#050d16" opacity=".65"/>
+<rect x="105" y="275" width="218" height="40" rx="8" fill="#1e404c" stroke="#8fe5d8" stroke-width="3"/>
+<rect x="170" y="243" width="87" height="44" rx="8" fill="#3d7880" stroke="#a2f7e7" stroke-width="3"/>
+<path d="M212 247L152 142 194 118 266 201Z" fill="url(#arm)" stroke="#b4fff1" stroke-width="3"/>
+<circle cx="211" cy="239" r="24" fill="#12313b" stroke="#acfff0" stroke-width="7"/>
+<circle cx="211" cy="239" r="8" fill="#99f7e9"/>
+<path d="M147 152 95 79l38-35 67 87Z" fill="#24545f" stroke="#9df2e7" stroke-width="3"/>
+<circle cx="159" cy="139" r="19" fill="#163b45" stroke="#acfff0" stroke-width="7"/>
+<circle cx="159" cy="139" r="6" fill="#a9fff0"/>
+<path d="M98 80 164 44l19 33-67 46Z" fill="#427c86" stroke="#acfff0" stroke-width="3"/>
+<circle cx="109" cy="80" r="15" fill="#173d46" stroke="#b5fff2" stroke-width="6"/>
+<path d="M172 49l33-6 9 13-8 12-28-1M174 67l30 7 8 15-14 9-31-14" stroke="#a6fbec" stroke-width="7" stroke-linejoin="round"/>
+</g>
+<g fill="#aadfdc" font-family="monospace" font-size="11" opacity=".84"><text x="52" y="61">YERL // UNIT 01</text><text x="365" y="450">ROBOTICS LAB</text><text x="54" y="445">X 025.0</text><text x="465" y="61">[3D]</text></g>
+</svg>
