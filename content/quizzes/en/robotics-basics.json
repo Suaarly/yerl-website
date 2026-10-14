@@ -1,0 +1,64 @@
+{
+  "slug": "robotics-basics",
+  "title": "Robotics foundations: quick quiz",
+  "description": "Five questions about robot systems, sensors, motor drivers and control.",
+  "category": "Foundations",
+  "published": true,
+  "questions": [
+    {
+      "prompt": "Which component measures the environment?",
+      "choices": [
+        "Actuator",
+        "Sensor",
+        "Gearbox",
+        "Battery"
+      ],
+      "answer": 2,
+      "explanation": "A sensor provides information about the environment or the robot itself."
+    },
+    {
+      "prompt": "Which part usually executes the robot control program?",
+      "choices": [
+        "Controller",
+        "Wheel",
+        "Battery connector",
+        "Bearing"
+      ],
+      "answer": 1,
+      "explanation": "The controller runs the logic, processes sensor readings and commands actuators."
+    },
+    {
+      "prompt": "What is feedback in a control system?",
+      "choices": [
+        "A decorative signal LED",
+        "A measurement of the system output",
+        "A type of battery",
+        "A mechanical frame"
+      ],
+      "answer": 2,
+      "explanation": "Feedback is a measurement of what actually happened, used to correct future commands."
+    },
+    {
+      "prompt": "Why is a motor driver often necessary?",
+      "choices": [
+        "To calculate geometry",
+        "To safely switch and control motor power",
+        "To store photos",
+        "To improve Wi-Fi reception"
+      ],
+      "answer": 2,
+      "explanation": "A microcontroller pin usually cannot provide the required motor current directly."
+    },
+    {
+      "prompt": "Which is the best first step in designing a robot?",
+      "choices": [
+        "Buy the strongest motors",
+        "Choose the biggest battery",
+        "Write down requirements and a system diagram",
+        "Print every part immediately"
+      ],
+      "answer": 3,
+      "explanation": "Requirements and a block diagram clarify the subsystems and constraints before spending time and money."
+    }
+  ]
+}

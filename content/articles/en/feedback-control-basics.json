@@ -1,0 +1,12 @@
+{
+  "slug": "feedback-control-basics",
+  "published": true,
+  "title": "Open-loop vs closed-loop control",
+  "description": "See why feedback improves motion and when a simple controller is enough.",
+  "category": "Programming",
+  "level": "Intermediate",
+  "minutes": 8,
+  "date": "2026-10-10",
+  "featured": true,
+  "body": "<p>When we command a motor to spin for two seconds, we assume that the resulting movement is predictable. Friction, battery voltage and load can change the result.</p><h2>Open-loop control</h2><p>The program sends a command without measuring the result. It is simple, but it cannot automatically correct an unexpected disturbance.</p><h2>Closed-loop control</h2><p>The robot measures its position or speed and compares the measurement with a target. The difference is called the <strong>error</strong>. The controller adjusts its output to reduce this error.</p><h2>A proportional controller</h2><p>A basic rule is <code>u = Kp * error</code>, where <code>Kp</code> is a chosen gain. A larger gain can produce stronger correction, but too much gain can cause oscillation or instability.</p><h2>Experiment</h2><p>Plot target speed, measured speed and error over time. Change only one variable in each experiment. This is more informative than selecting gains by intuition.</p>"
+}
