@@ -1,0 +1,11 @@
+{
+  "name": "yerl-website",
+  "private": true,
+  "version": "1.0.0",
+  "description": "YERL - Young Engineering Robotics Lab (bilingual static website)",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

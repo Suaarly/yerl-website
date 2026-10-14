@@ -1,0 +1,195 @@
+media:
+  - name: images
+    label: Article images
+    input: public/images
+    output: /images
+    categories: [image]
+    rename: safe
+  - name: documents
+    label: Downloadable documents
+    input: public/files
+    output: /files
+    categories: [document, compressed, code]
+    rename: safe
+content:
+  - name: en_articles
+    label: Articles (English)
+    type: collection
+    path: content/articles/en
+    format: json
+    filename: "{fields.slug}.json"
+    view:
+      fields: [title, category, date, published]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields: &article_fields
+      - name: slug
+        label: URL slug (Latin letters, e.g. motor-control)
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+      - name: title
+        label: Article title
+        type: string
+        required: true
+      - name: description
+        label: Description / search preview
+        type: text
+        required: true
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values: [Foundations, Electronics, Programming, Mechanics, Sensors, Olympiad]
+      - name: level
+        label: Level
+        type: select
+        options:
+          values: [Beginner, Intermediate, Advanced]
+      - name: minutes
+        label: Reading time (minutes)
+        type: number
+      - name: date
+        label: Published date
+        type: date
+        options:
+          format: yyyy-MM-dd
+      - name: published
+        label: Publicly visible
+        type: boolean
+      - name: featured
+        label: Show on homepage
+        type: boolean
+      - name: body
+        label: Article contents
+        type: rich-text
+        options:
+          format: html
+          media: images
+          switcher: true
+  - name: ru_articles
+    label: Статьи (Русский)
+    type: collection
+    path: content/articles/ru
+    format: json
+    filename: "{fields.slug}.json"
+    view:
+      fields: [title, category, date, published]
+      primary: title
+    fields: *article_fields
+  - name: en_resources
+    label: Downloads (English)
+    type: collection
+    path: content/resources/en
+    format: json
+    filename: "{fields.slug}.json"
+    view:
+      fields: [title, format, published]
+      primary: title
+    fields: &resource_fields
+      - name: slug
+        label: URL slug (Latin letters)
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+      - name: title
+        type: string
+        required: true
+      - name: description
+        type: text
+        required: true
+      - name: category
+        type: select
+        options:
+          values: [Foundations, Electronics, Programming, Mechanics, Sensors, Olympiad]
+      - name: format
+        label: File type (PDF, ZIP, etc.)
+        type: string
+      - name: file
+        label: Upload / choose file
+        type: file
+        required: true
+        options:
+          media: documents
+      - name: published
+        type: boolean
+  - name: ru_resources
+    label: Файлы (Русский)
+    type: collection
+    path: content/resources/ru
+    format: json
+    filename: "{fields.slug}.json"
+    view:
+      fields: [title, format, published]
+      primary: title
+    fields: *resource_fields
+  - name: en_quizzes
+    label: Quizzes (English)
+    type: collection
+    path: content/quizzes/en
+    format: json
+    filename: "{fields.slug}.json"
+    view:
+      fields: [title, published]
+      primary: title
+    fields: &quiz_fields
+      - name: slug
+        label: URL slug (Latin letters)
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+      - name: title
+        type: string
+        required: true
+      - name: description
+        type: text
+        required: true
+      - name: category
+        type: select
+        options:
+          values: [Foundations, Electronics, Programming, Mechanics, Sensors, Olympiad]
+      - name: published
+        type: boolean
+      - name: questions
+        label: Questions
+        type: object
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{prompt}"
+        fields:
+          - name: prompt
+            label: Question
+            type: text
+            required: true
+          - name: choices
+            label: Answer options
+            type: string
+            list:
+              min: 2
+              max: 5
+          - name: answer
+            label: Correct option number (1 = first option)
+            type: number
+            required: true
+          - name: explanation
+            label: Explanation shown after submitting
+            type: text
+  - name: ru_quizzes
+    label: Тесты (Русский)
+    type: collection
+    path: content/quizzes/ru
+    format: json
+    filename: "{fields.slug}.json"
+    view:
+      fields: [title, published]
+      primary: title
+    fields: *quiz_fields
+settings:
+  content:
+    merge: true
